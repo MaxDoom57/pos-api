@@ -1,0 +1,1278 @@
+[
+  {
+    "ContainingType": "Api.Controllers.AuthController",
+    "Method": "GetAccessLevel",
+    "RelativePath": "api/pos/v0.1/accessLevel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.BanksController",
+    "Method": "GetBanks",
+    "RelativePath": "api/pos/v0.1/banks",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.BanksController",
+    "Method": "CreateBank",
+    "RelativePath": "api/pos/v0.1/banks",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Bank.CreateBankDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.BanksController",
+    "Method": "UpdateBank",
+    "RelativePath": "api/pos/v0.1/banks/{bankKey}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bankKey",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Bank.UpdateBankDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.BanksController",
+    "Method": "DeleteBank",
+    "RelativePath": "api/pos/v0.1/banks/{bankKey}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bankKey",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.CodesController",
+    "Method": "GetCodesByType",
+    "RelativePath": "api/pos/v0.1/code",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Codes.GetCodesByTypeRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.CodesController",
+    "Method": "Create",
+    "RelativePath": "api/pos/v0.1/code",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Codes.CreateCodeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.CodesController",
+    "Method": "Update",
+    "RelativePath": "api/pos/v0.1/code/{cdKy}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cdKy",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Codes.UpdateCodeDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.CodesController",
+    "Method": "DeleteCode",
+    "RelativePath": "api/pos/v0.1/code/{cdKy}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cdKy",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.CodesController",
+    "Method": "GetUserAccessibleControls",
+    "RelativePath": "api/pos/v0.1/code/types",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerController",
+    "Method": "GetAll",
+    "RelativePath": "api/pos/v0.1/Customer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerController",
+    "Method": "AddCustomer",
+    "RelativePath": "api/pos/v0.1/Customer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Customers.AddCustomerAddressDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CustomerController",
+    "Method": "UpdateCustomer",
+    "RelativePath": "api/pos/v0.1/Customer",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Customers.UpdateCustomerAddressDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.CustomerAccountController",
+    "Method": "GetAll",
+    "RelativePath": "api/pos/v0.1/CustomerAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GREController",
+    "Method": "AddGRE",
+    "RelativePath": "api/pos/v0.1/GRE",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.GRE.AddGRERequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GREController",
+    "Method": "UpdateGRE",
+    "RelativePath": "api/pos/v0.1/GRE",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.GRE.UpdateGRERequestDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GREController",
+    "Method": "GetGRE",
+    "RelativePath": "api/pos/v0.1/GRE/{trnNo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GREController",
+    "Method": "DeleteGRE",
+    "RelativePath": "api/pos/v0.1/GRE/{trnNo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GRNController",
+    "Method": "CreateGRN",
+    "RelativePath": "api/pos/v0.1/GRN",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.GRN.GRNCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GRNController",
+    "Method": "UpdateGRN",
+    "RelativePath": "api/pos/v0.1/GRN",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.GRN.GRNUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GRNController",
+    "Method": "GetGRN",
+    "RelativePath": "api/pos/v0.1/GRN/{trnNo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.GRNController",
+    "Method": "DeleteGRN",
+    "RelativePath": "api/pos/v0.1/GRN/{trnNo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.InvoiceController",
+    "Method": "AddInvoice",
+    "RelativePath": "api/pos/v0.1/Invoice",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Invoice.InvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.InvoiceController",
+    "Method": "UpdateInvoice",
+    "RelativePath": "api/pos/v0.1/Invoice/{trnKy}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnKy",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Invoice.UpdateInvoiceDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.InvoiceController",
+    "Method": "GetInvoiceByTrnNo",
+    "RelativePath": "api/pos/v0.1/Invoice/{trnNo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.InvoiceDetailsController",
+    "Method": "GetDetails",
+    "RelativePath": "api/pos/v0.1/InvoiceDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "GetAll",
+    "RelativePath": "api/pos/v0.1/items",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "AddItem",
+    "RelativePath": "api/pos/v0.1/items",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Items.AddItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "UpdateItem",
+    "RelativePath": "api/pos/v0.1/items",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Items.UpdateItemDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "DeleteItem",
+    "RelativePath": "api/pos/v0.1/items/{itemKey}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemKey",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "GetAllActiveItems",
+    "RelativePath": "api/pos/v0.1/items/active",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "AddItemBatch",
+    "RelativePath": "api/pos/v0.1/items/batch",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.ItemBatch.AddItemBatchDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "UpdateItemBatch",
+    "RelativePath": "api/pos/v0.1/items/batch",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.ItemBatch.UpdateItemBatchDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.ItemsController",
+    "Method": "GetItemBatches",
+    "RelativePath": "api/pos/v0.1/items/batch/{itemKey}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "itemKey",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/pos/v0.1/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Auth.LoginRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/pos/v0.1/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.LookupsController",
+    "Method": "GetItemCategory1",
+    "RelativePath": "api/pos/v0.1/lookups/itemCategory1",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.LookupsController",
+    "Method": "GetItemCategory2",
+    "RelativePath": "api/pos/v0.1/lookups/itemCategory2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.LookupsController",
+    "Method": "GetItemCategory3",
+    "RelativePath": "api/pos/v0.1/lookups/itemCategory3",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.LookupsController",
+    "Method": "GetItemCategory4",
+    "RelativePath": "api/pos/v0.1/lookups/itemCategory4",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.LookupsController",
+    "Method": "GetLastTransactionNo",
+    "RelativePath": "api/pos/v0.1/lookups/trnNoLast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Lookups.GetLastTrnNoRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.PaymentTermController",
+    "Method": "GetAll",
+    "RelativePath": "api/pos/v0.1/PaymentTerm",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.PurchaseOrderController",
+    "Method": "Create",
+    "RelativePath": "api/pos/v0.1/PurchaseOrder",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.PurchaseOrder.PurchaseOrderSaveDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.PurchaseOrderController",
+    "Method": "GetPurchaseOrder",
+    "RelativePath": "api/pos/v0.1/PurchaseOrder/{orderNo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ordTypKy",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.PurchaseOrderController",
+    "Method": "Update",
+    "RelativePath": "api/pos/v0.1/PurchaseOrder/{orderNo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.PurchaseOrder.PurchaseOrderSaveDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.PurchaseOrderController",
+    "Method": "Delete",
+    "RelativePath": "api/pos/v0.1/PurchaseOrder/{orderNo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetAccountAddressDetails",
+    "RelativePath": "api/pos/v0.1/Reports/AccountAddressRel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetAccountBalanceAsAt",
+    "RelativePath": "api/pos/v0.1/Reports/AccountBalanceAsAt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Account_Balance_As_At.AccBalanceAsAtRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetAccountLedger",
+    "RelativePath": "api/pos/v0.1/Reports/AccountLedger",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Account_Ledger.AccLedgerReportRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetAccountTransactionDetails",
+    "RelativePath": "api/pos/v0.1/Reports/AccountTransactionDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Account_Transaction_Details.AccTrnDetailsReportRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetAgeAnalysis",
+    "RelativePath": "api/pos/v0.1/Reports/AgeAnalysis",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Creditor_Age_Analysis.AgeAnalysisRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetChequeReturnDetails",
+    "RelativePath": "api/pos/v0.1/Reports/ChequeReturnDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Return_Cheque_Details.ChqReturnReportRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetLssCreditInvoiceSummary",
+    "RelativePath": "api/pos/v0.1/Reports/CreditSalesSummary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Credit_Sales_Summary.LssCreditInvoiceSummaryRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetAllAddressDetails",
+    "RelativePath": "api/pos/v0.1/Reports/CustomerAddressDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetDebtorsDueStatement",
+    "RelativePath": "api/pos/v0.1/Reports/DueStatement",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Creditors_Due_Statement.DebtorsDueStatementRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetGrossProfitItemLocation",
+    "RelativePath": "api/pos/v0.1/Reports/GrossProfit",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Gross_Profit.GrossProfitItemLocationRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetItemBatchDetails",
+    "RelativePath": "api/pos/v0.1/Reports/ItemBatchDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Item_Batch_Details.ItemBatchReportRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetItemCat1WiseTransactionSummary",
+    "RelativePath": "api/pos/v0.1/Reports/ItemCat1WiseTransactionSummary",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Item_Cat1_Wise_Transaction_Summary.ItmCat1WiseTrnSumRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetAllItemsVsf",
+    "RelativePath": "api/pos/v0.1/Reports/ItemsVsf",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetNonPerformedCustomers",
+    "RelativePath": "api/pos/v0.1/Reports/NonPerformedCustomers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Non_Active_Customer_List.NonPerformedCustomerRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetNonPerformedItems",
+    "RelativePath": "api/pos/v0.1/Reports/NonPerformedItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Non_Moving_Item_List.NonPerformedItemRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetReOrderItems",
+    "RelativePath": "api/pos/v0.1/Reports/ReOrderItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_ReOrder_Details.ReOrderItemsRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetSalesByRep",
+    "RelativePath": "api/pos/v0.1/Reports/SalesByRep",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Sales_Summary_By_Rep.ReportSalesByRepRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetSalesDetailsByPaymentMode",
+    "RelativePath": "api/pos/v0.1/Reports/SalesDetailsByPaymentMode",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Sales_Details_by_Payment_Mode.SalesDetailsByPaymentModeRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetSalesItemReport",
+    "RelativePath": "api/pos/v0.1/Reports/SalesItemReport",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Sales_Details_By_Item.SalesItemReportRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetSalesRepWiseCustomer",
+    "RelativePath": "api/pos/v0.1/Reports/SalesRepWiseCustomer",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Sales_Details.SalesRepWiseCustomerRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetSetOffDetails",
+    "RelativePath": "api/pos/v0.1/Reports/SetOffDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_SetOff_Details_Report.SetOffDetailsReportRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetStockAsAt",
+    "RelativePath": "api/pos/v0.1/Reports/StockAsAt",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Stock_As_At.StockAsAtRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetStockLedger",
+    "RelativePath": "api/pos/v0.1/Reports/StockLedger",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Stock_Ledger.StockLedgerRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "POS.API.Controllers.ReportsController",
+    "Method": "GetTransactionDetailsReport",
+    "RelativePath": "api/pos/v0.1/Reports/TransactionDetails",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Application.DTOs.Reports.Report_Sales_Summary_By_Rep.TrnDetReportRequestDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.SalesAccountController",
+    "Method": "GetAll",
+    "RelativePath": "api/pos/v0.1/SalesAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.SalesReturnController",
+    "Method": "AddSalesReturn",
+    "RelativePath": "api/pos/v0.1/SalesReturn",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.SalesReturn.SalesReturnDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.SalesReturnController",
+    "Method": "UpdateSalesReturn",
+    "RelativePath": "api/pos/v0.1/SalesReturn",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.SalesReturn.SalesReturnUpdateDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "CreateStockAddition",
+    "RelativePath": "api/pos/v0.1/Stock/addition",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Stock_Addition.StockAddPostDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "UpdateStockAddition",
+    "RelativePath": "api/pos/v0.1/Stock/addition",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.Stock_Addition.StockAddUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "GetStockAddition",
+    "RelativePath": "api/pos/v0.1/Stock/addition/{trnNo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "DeleteStockAddition",
+    "RelativePath": "api/pos/v0.1/Stock/addition/{trnNo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "CreateStockDeduction",
+    "RelativePath": "api/pos/v0.1/Stock/deduction",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.StockDeduction.StockDeductionPostDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "UpdateStockDeduction",
+    "RelativePath": "api/pos/v0.1/Stock/deduction",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.StockDeduction.StockDeductionUpdateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "GetStockDeduction",
+    "RelativePath": "api/pos/v0.1/Stock/deduction/{trnNo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Api.Controllers.StockController",
+    "Method": "DeleteStockDeduction",
+    "RelativePath": "api/pos/v0.1/Stock/deduction/{trnNo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trnNo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.UserController",
+    "Method": "GetActiveUsers",
+    "RelativePath": "api/pos/v0.1/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.UserController",
+    "Method": "CreateUser",
+    "RelativePath": "api/pos/v0.1/users",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.User.CreateUserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.UserController",
+    "Method": "ChangePassword",
+    "RelativePath": "api/pos/v0.1/users/{usrKy}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usrKy",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dto",
+        "Type": "Application.DTOs.User.ChangePasswordDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/pos/v0.1/users/{usrKy}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usrKy",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

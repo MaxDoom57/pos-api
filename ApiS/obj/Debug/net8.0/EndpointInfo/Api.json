@@ -1,0 +1,4229 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Api",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/pos/v0.1/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/accessLevel": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/banks": {
+      "get": {
+        "tags": [
+          "Banks"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Banks"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBankDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBankDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateBankDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/banks/{bankKey}": {
+      "put": {
+        "tags": [
+          "Banks"
+        ],
+        "parameters": [
+          {
+            "name": "bankKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBankDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBankDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateBankDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Banks"
+        ],
+        "parameters": [
+          {
+            "name": "bankKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/code/types": {
+      "get": {
+        "tags": [
+          "Codes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/code": {
+      "get": {
+        "tags": [
+          "Codes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCodesByTypeRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCodesByTypeRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetCodesByTypeRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Codes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/code/{cdKy}": {
+      "put": {
+        "tags": [
+          "Codes"
+        ],
+        "parameters": [
+          {
+            "name": "cdKy",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCodeDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCodeDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCodeDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Codes"
+        ],
+        "parameters": [
+          {
+            "name": "cdKy",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Customer": {
+      "get": {
+        "tags": [
+          "Customer"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Customer"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCustomerAddressDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCustomerAddressDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddCustomerAddressDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Customer"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomerAddressDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomerAddressDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCustomerAddressDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/CustomerAccount": {
+      "get": {
+        "tags": [
+          "CustomerAccount"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/GRE/{trnNo}": {
+      "get": {
+        "tags": [
+          "GRE"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GRE"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/GRE": {
+      "post": {
+        "tags": [
+          "GRE"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddGRERequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddGRERequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddGRERequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GRE"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGRERequestDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGRERequestDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateGRERequestDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/GRN/{trnNo}": {
+      "get": {
+        "tags": [
+          "GRN"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "GRN"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/GRN": {
+      "post": {
+        "tags": [
+          "GRN"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GRNCreateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GRNCreateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GRNCreateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "GRN"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GRNUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GRNUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GRNUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Invoice/{trnNo}": {
+      "get": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Invoice": {
+      "post": {
+        "tags": [
+          "Invoice"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvoiceDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvoiceDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/InvoiceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Invoice/{trnKy}": {
+      "put": {
+        "tags": [
+          "Invoice"
+        ],
+        "parameters": [
+          {
+            "name": "trnKy",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateInvoiceDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateInvoiceDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateInvoiceDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/InvoiceDetails": {
+      "get": {
+        "tags": [
+          "InvoiceDetails"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/items": {
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Items"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddItemDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddItemDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddItemDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Items"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateItemDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateItemDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateItemDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/items/active": {
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/items/{itemKey}": {
+      "delete": {
+        "tags": [
+          "Items"
+        ],
+        "parameters": [
+          {
+            "name": "itemKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/items/batch/{itemKey}": {
+      "get": {
+        "tags": [
+          "Items"
+        ],
+        "parameters": [
+          {
+            "name": "itemKey",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/items/batch": {
+      "post": {
+        "tags": [
+          "Items"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddItemBatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddItemBatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddItemBatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Items"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateItemBatchDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateItemBatchDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateItemBatchDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/lookups/itemCategory1": {
+      "get": {
+        "tags": [
+          "Lookups"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/lookups/itemCategory2": {
+      "get": {
+        "tags": [
+          "Lookups"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/lookups/itemCategory3": {
+      "get": {
+        "tags": [
+          "Lookups"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/lookups/itemCategory4": {
+      "get": {
+        "tags": [
+          "Lookups"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/lookups/trnNoLast": {
+      "get": {
+        "tags": [
+          "Lookups"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetLastTrnNoRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetLastTrnNoRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetLastTrnNoRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/PaymentTerm": {
+      "get": {
+        "tags": [
+          "PaymentTerm"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/PurchaseOrder/{orderNo}": {
+      "get": {
+        "tags": [
+          "PurchaseOrder"
+        ],
+        "parameters": [
+          {
+            "name": "orderNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "ordTypKy",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "PurchaseOrder"
+        ],
+        "parameters": [
+          {
+            "name": "orderNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseOrderSaveDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseOrderSaveDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseOrderSaveDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "PurchaseOrder"
+        ],
+        "parameters": [
+          {
+            "name": "orderNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/PurchaseOrder": {
+      "post": {
+        "tags": [
+          "PurchaseOrder"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseOrderSaveDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseOrderSaveDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PurchaseOrderSaveDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/SalesByRep": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportSalesByRepRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportSalesByRepRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReportSalesByRepRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/SalesDetailsByPaymentMode": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesDetailsByPaymentModeRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesDetailsByPaymentModeRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesDetailsByPaymentModeRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/TransactionDetails": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrnDetReportRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrnDetReportRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/TrnDetReportRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/SalesRepWiseCustomer": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesRepWiseCustomerRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesRepWiseCustomerRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesRepWiseCustomerRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/SalesItemReport": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesItemReportRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesItemReportRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesItemReportRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/NonPerformedItems": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NonPerformedItemRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NonPerformedItemRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NonPerformedItemRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/NonPerformedCustomers": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NonPerformedCustomerRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NonPerformedCustomerRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/NonPerformedCustomerRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/ChequeReturnDetails": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChqReturnReportRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChqReturnReportRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChqReturnReportRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/AccountLedger": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccLedgerReportRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccLedgerReportRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccLedgerReportRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/AccountTransactionDetails": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccTrnDetailsReportRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccTrnDetailsReportRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccTrnDetailsReportRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/AccountBalanceAsAt": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccBalanceAsAtRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccBalanceAsAtRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AccBalanceAsAtRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/ItemCat1WiseTransactionSummary": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItmCat1WiseTrnSumRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItmCat1WiseTrnSumRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItmCat1WiseTrnSumRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/SetOffDetails": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetOffDetailsReportRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetOffDetailsReportRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetOffDetailsReportRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/GrossProfit": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrossProfitItemLocationRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrossProfitItemLocationRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GrossProfitItemLocationRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/CreditSalesSummary": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LssCreditInvoiceSummaryRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LssCreditInvoiceSummaryRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LssCreditInvoiceSummaryRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/AgeAnalysis": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgeAnalysisRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgeAnalysisRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AgeAnalysisRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/DueStatement": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebtorsDueStatementRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebtorsDueStatementRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DebtorsDueStatementRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/StockLedger": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockLedgerRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockLedgerRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockLedgerRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/StockAsAt": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAsAtRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAsAtRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAsAtRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/ItemBatchDetails": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemBatchReportRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemBatchReportRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ItemBatchReportRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/ReOrderItems": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReOrderItemsRequestDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReOrderItemsRequestDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ReOrderItemsRequestDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/CustomerAddressDetails": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/AccountAddressRel": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Reports/ItemsVsf": {
+      "get": {
+        "tags": [
+          "Reports"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/SalesAccount": {
+      "get": {
+        "tags": [
+          "SalesAccount"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/SalesReturn": {
+      "post": {
+        "tags": [
+          "SalesReturn"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "SalesReturn"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnUpdateDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnUpdateDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SalesReturnUpdateDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Stock/addition/{trnNo}": {
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Stock/addition": {
+      "post": {
+        "tags": [
+          "Stock"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAddPostDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAddPostDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAddPostDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Stock"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAddUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAddUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockAddUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Stock/deduction/{trnNo}": {
+      "get": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Stock"
+        ],
+        "parameters": [
+          {
+            "name": "trnNo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/Stock/deduction": {
+      "post": {
+        "tags": [
+          "Stock"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockDeductionPostDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockDeductionPostDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockDeductionPostDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Stock"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockDeductionUpdateDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockDeductionUpdateDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/StockDeductionUpdateDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/users": {
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateUserDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/pos/v0.1/users/{usrKy}": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "usrKy",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChangePasswordDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "parameters": [
+          {
+            "name": "usrKy",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AccBalanceAsAtRequestDto": {
+        "type": "object",
+        "properties": {
+          "asAtDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "accTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccLedgerReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "accTypKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "multiCurrency": {
+            "type": "boolean"
+          },
+          "landScope": {
+            "type": "boolean"
+          },
+          "orderBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageBreak": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AccTrnDetailsReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "fromTrnNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "toTrnNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "fromDocNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "toDocNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fromYurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "toYurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "accTypKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "trnTypKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isContra": {
+            "type": "boolean"
+          },
+          "isSummary": {
+            "type": "boolean"
+          },
+          "isLandscape": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddCustomerAddressDto": {
+        "type": "object",
+        "properties": {
+          "adrNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "fstNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "midNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "lstNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "tP1": {
+            "type": "string",
+            "nullable": true
+          },
+          "tP2": {
+            "type": "string",
+            "nullable": true
+          },
+          "eMail": {
+            "type": "string",
+            "nullable": true
+          },
+          "ourCd": {
+            "type": "string",
+            "nullable": true
+          },
+          "gpsLoc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddGREItemDTO": {
+        "type": "object",
+        "properties": {
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "slsPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "cosPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "trnPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "gstAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "nslAmt": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddGRERequestDTO": {
+        "type": "object",
+        "properties": {
+          "trnDt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pmtTrm": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/AddGREItemDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddItemBatchDTO": {
+        "required": [
+          "itemKey"
+        ],
+        "type": "object",
+        "properties": {
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "batchNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "expirDt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "salePrice": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AddItemDTO": {
+        "required": [
+          "costPrice",
+          "itemCode",
+          "itemName",
+          "itemType",
+          "salesPrice",
+          "unitKey"
+        ],
+        "type": "object",
+        "properties": {
+          "itemCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemType": {
+            "type": "string",
+            "nullable": true
+          },
+          "partNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "itmCat1Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat2Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat3Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat4Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unitKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "discountPrecentage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "salesPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "discountAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "AgeAnalysisRequestDto": {
+        "type": "object",
+        "properties": {
+          "reportMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "asAtDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "overDueOnly": {
+            "type": "boolean"
+          },
+          "day1": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "day2": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "day3": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "day4": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "slsRepAdrKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "adrTyp2Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "buCd": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChangePasswordDto": {
+        "type": "object",
+        "properties": {
+          "usrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "oldPwd": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPwd": {
+            "type": "string",
+            "nullable": true
+          },
+          "confirmPwd": {
+            "type": "string",
+            "nullable": true
+          },
+          "pwdTip": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChqReturnReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateBankDto": {
+        "type": "object",
+        "properties": {
+          "bnkCd": {
+            "type": "string",
+            "nullable": true
+          },
+          "bnkNm": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateCodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "cdNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "conCd": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateUserDto": {
+        "type": "object",
+        "properties": {
+          "usrNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "usrId": {
+            "type": "string",
+            "nullable": true
+          },
+          "newPwd": {
+            "type": "string",
+            "nullable": true
+          },
+          "confirmPwd": {
+            "type": "string",
+            "nullable": true
+          },
+          "pwdTip": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "DebtorsDueStatementRequestDto": {
+        "type": "object",
+        "properties": {
+          "asAtDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isOverdue": {
+            "type": "boolean"
+          },
+          "trnTypCd": {
+            "type": "string",
+            "nullable": true
+          },
+          "formTag": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GRNCreateDTO": {
+        "type": "object",
+        "properties": {
+          "trnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "purAccKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "des": {
+            "type": "string",
+            "nullable": true
+          },
+          "pmtTrmKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GRNItemCreateDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GRNItemCreateDTO": {
+        "type": "object",
+        "properties": {
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "cosPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "trnPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "slsPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "batchNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "expirDt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "itmBatchKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GRNUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "trnNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "des": {
+            "type": "string",
+            "nullable": true
+          },
+          "pmtTrmKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "purAccKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/GRNItemCreateDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetCodesByTypeRequestDto": {
+        "type": "object",
+        "properties": {
+          "conCd": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetLastTrnNoRequestDto": {
+        "type": "object",
+        "properties": {
+          "ourCd": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GrossProfitItemLocationRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "itmKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "locKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "buKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "repAdrKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmTypKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat1Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat2Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat3Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat4Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "groupBy1": {
+            "type": "string",
+            "nullable": true
+          },
+          "groupBy2": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceDto": {
+        "required": [
+          "accKy",
+          "adrCd",
+          "amt",
+          "pmtTrm1",
+          "pmtTrm1Amt"
+        ],
+        "type": "object",
+        "properties": {
+          "docNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "adrCd": {
+            "type": "string",
+            "nullable": true
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pmtTrm1": {
+            "type": "string",
+            "nullable": true
+          },
+          "pmtTrm2": {
+            "type": "string",
+            "nullable": true
+          },
+          "pmtTrm1Amt": {
+            "type": "number",
+            "format": "double"
+          },
+          "pmtTrm2Amt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amt": {
+            "type": "number",
+            "format": "double"
+          },
+          "disAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceItemDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceItemDto": {
+        "required": [
+          "itmKy",
+          "qty",
+          "trnPri"
+        ],
+        "type": "object",
+        "properties": {
+          "itmKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qty": {
+            "type": "number",
+            "format": "float"
+          },
+          "cosPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "slsPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "trnPri": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItemBatchReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "itmKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItmCat1WiseTrnSumRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "locKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itmTypKy": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequestDto": {
+        "required": [
+          "companyKey",
+          "password",
+          "projectKey",
+          "userId"
+        ],
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "projectKey": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "LssCreditInvoiceSummaryRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NonPerformedCustomerRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NonPerformedItemRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "itmCat1Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat2Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "PurchaseOrderItemDto": {
+        "type": "object",
+        "properties": {
+          "ordDetKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itmKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "rate": {
+            "type": "number",
+            "format": "double"
+          },
+          "reqDt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "des": {
+            "type": "string",
+            "nullable": true
+          },
+          "taxAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "PurchaseOrderSaveDto": {
+        "type": "object",
+        "properties": {
+          "ordDt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "docNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "des": {
+            "type": "string",
+            "nullable": true
+          },
+          "ordTypKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ordFrqKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/PurchaseOrderItemDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReOrderItemsRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "itmKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat1Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat2Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat3Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ReportSalesByRepRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "repName": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "salesReturn": {
+            "type": "boolean"
+          },
+          "viewType": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesDetailsByPaymentModeRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "paymentModeName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesItemReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "salesOnly": {
+            "type": "boolean"
+          },
+          "summary": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesRepWiseCustomerRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "repAdrKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "onlySales": {
+            "type": "boolean"
+          },
+          "isSummary": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesReturnDto": {
+        "type": "object",
+        "properties": {
+          "docNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "repAdrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pmtTrm": {
+            "type": "string",
+            "nullable": true
+          },
+          "disPer": {
+            "type": "number",
+            "format": "double"
+          },
+          "trnNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SalesReturnItemDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesReturnItemDto": {
+        "type": "object",
+        "properties": {
+          "itmKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "cosPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "slsPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "trnPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "disPer": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesReturnUpdateDto": {
+        "type": "object",
+        "properties": {
+          "trnNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "docNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "repAdrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "disPer": {
+            "type": "number",
+            "format": "double"
+          },
+          "disAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "pmtTrm": {
+            "type": "string",
+            "nullable": true
+          },
+          "pmtMode": {
+            "type": "string",
+            "nullable": true
+          },
+          "invTrnKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SalesReturnUpdateItemDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SalesReturnUpdateItemDto": {
+        "type": "object",
+        "properties": {
+          "itemTrnKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "originalQuantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "discountAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "salesPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "tranPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "isDeleted": {
+            "type": "boolean"
+          },
+          "isUpdated": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetOffDetailsReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "varName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockAddDetailInput": {
+        "type": "object",
+        "properties": {
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "salePrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "unitKey": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockAddPostDTO": {
+        "type": "object",
+        "properties": {
+          "trnNo": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "trnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StockAddDetailInput"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockAddUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "trnNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StockAddDetailInput"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockAsAtRequestDto": {
+        "type": "object",
+        "properties": {
+          "locKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "buKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmTypKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat1Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat2Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat3Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat4Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "isCurrentStockQty": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockDeductionItemDTO": {
+        "type": "object",
+        "properties": {
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double"
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "double"
+          },
+          "salePrice": {
+            "type": "number",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockDeductionPostDTO": {
+        "type": "object",
+        "properties": {
+          "trnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StockDeductionItemDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockDeductionUpdateDTO": {
+        "type": "object",
+        "properties": {
+          "trnNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trnDate": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "locKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/StockDeductionItemDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "StockLedgerRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "itmKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itmTypKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "locKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "orderBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "pageBreak": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "TrnDetReportRequestDto": {
+        "type": "object",
+        "properties": {
+          "fromDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "toDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "trnTyp": {
+            "type": "string",
+            "nullable": true
+          },
+          "adrNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "itmNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "freeItemsOnly": {
+            "type": "boolean"
+          },
+          "repAdrKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "showDetails": {
+            "type": "boolean"
+          },
+          "summary": {
+            "type": "boolean"
+          },
+          "orderBy": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateBankDto": {
+        "type": "object",
+        "properties": {
+          "bnkCd": {
+            "type": "string",
+            "nullable": true
+          },
+          "bnkNm": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCodeDto": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "cdNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "fInAct": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateCustomerAddressDto": {
+        "type": "object",
+        "properties": {
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "adrNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "fstNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "midNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "lstNm": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "tP1": {
+            "type": "string",
+            "nullable": true
+          },
+          "tP2": {
+            "type": "string",
+            "nullable": true
+          },
+          "eMail": {
+            "type": "string",
+            "nullable": true
+          },
+          "gpsLoc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateGREItemDTO": {
+        "type": "object",
+        "properties": {
+          "itmTrnKy": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "qty": {
+            "type": "number",
+            "format": "double"
+          },
+          "trnPri": {
+            "type": "number",
+            "format": "double"
+          },
+          "gstAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "nslAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "toDelete": {
+            "type": "boolean"
+          },
+          "isValid": {
+            "type": "boolean"
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateGRERequestDTO": {
+        "type": "object",
+        "properties": {
+          "trnNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "trnDt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "docNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "adrKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "locKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pmtTrm": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UpdateGREItemDTO"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateInvoiceDto": {
+        "type": "object",
+        "properties": {
+          "trnKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "docNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "yurRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "accKy": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pmtTrm1": {
+            "type": "string",
+            "nullable": true
+          },
+          "pmtTrm2": {
+            "type": "string",
+            "nullable": true
+          },
+          "pmtTrm1Amt": {
+            "type": "number",
+            "format": "double"
+          },
+          "pmtTrm2Amt": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "amt": {
+            "type": "number",
+            "format": "double"
+          },
+          "disAmt": {
+            "type": "number",
+            "format": "double"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceItemDto"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateItemBatchDTO": {
+        "required": [
+          "itemBatchKey",
+          "itemKey"
+        ],
+        "type": "object",
+        "properties": {
+          "itemBatchKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "batchNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "expirDt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "salePrice": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "float",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UpdateItemDTO": {
+        "type": "object",
+        "properties": {
+          "itemKey": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemType": {
+            "type": "string",
+            "nullable": true
+          },
+          "partNo": {
+            "type": "string",
+            "nullable": true
+          },
+          "itemName": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "itmCat1Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat2Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat3Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "itmCat4Ky": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "unitKey": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "discountPrecentage": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "costPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "salesPrice": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "discountAmount": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "fInAct": {
+            "type": "boolean",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

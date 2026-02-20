@@ -1,0 +1,11 @@
+E:\Interwave Solutions\Pos\Domain\bin\Release\net8.0\Domain.deps.json
+E:\Interwave Solutions\Pos\Domain\bin\Release\net8.0\Domain.dll
+E:\Interwave Solutions\Pos\Domain\bin\Release\net8.0\Domain.pdb
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\Domain.AssemblyInfoInputs.cache
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\Domain.AssemblyInfo.cs
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\Domain.csproj.CoreCompileInputs.cache
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\Domain.dll
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\refint\Domain.dll
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\Domain.pdb
+E:\Interwave Solutions\Pos\Domain\obj\Release\net8.0\ref\Domain.dll

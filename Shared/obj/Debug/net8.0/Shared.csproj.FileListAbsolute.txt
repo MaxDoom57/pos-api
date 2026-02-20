@@ -1,0 +1,11 @@
+E:\Interwave Solutions\Pos\Shared\bin\Debug\net8.0\Shared.deps.json
+E:\Interwave Solutions\Pos\Shared\bin\Debug\net8.0\Shared.dll
+E:\Interwave Solutions\Pos\Shared\bin\Debug\net8.0\Shared.pdb
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\Shared.GeneratedMSBuildEditorConfig.editorconfig
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\Shared.AssemblyInfoInputs.cache
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\Shared.AssemblyInfo.cs
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\Shared.csproj.CoreCompileInputs.cache
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\Shared.dll
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\refint\Shared.dll
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\Shared.pdb
+E:\Interwave Solutions\Pos\Shared\obj\Debug\net8.0\ref\Shared.dll
