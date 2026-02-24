@@ -16,5 +16,5 @@ echo "=== Starting cloudflared tunnel proxy ==="
 echo "=== Waiting for tunnel to be ready ==="
 sleep 5
 
-echo "=== Starting ServiceStationApi ==="
-exec dotnet ServiceStationApi.dll --urls "http://0.0.0.0:${PORT:-8080}"
+echo "=== Starting POSApi ==="
+exec dotnet Api.dll --urls "http://0.0.0.0:${PORT:-8080}"
