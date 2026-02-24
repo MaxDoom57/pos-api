@@ -6,8 +6,16 @@ COPY . .
 RUN dotnet restore Api/Api.csproj
 RUN dotnet publish Api/Api.csproj -c Release -o /app/publish
 
-# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
+
+# Install curl (needed by start.sh to download cloudflared)
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
 COPY --from=build /app/publish .
-ENTRYPOINT ["dotnet", "Api.dll"]
+COPY start.sh .
+RUN chmod +x start.sh
+
+EXPOSE 8080
+
+ENTRYPOINT ["./start.sh"]

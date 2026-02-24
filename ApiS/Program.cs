@@ -11,7 +11,14 @@ using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Bind to Render dynamic port
+builder.WebHost.ConfigureKestrel(options =>
+{
+    var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+    options.ListenAnyIP(int.Parse(port));
+});
+
+// Add services
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -33,9 +40,7 @@ builder.Services.AddScoped<CustomerService>();
 builder.Services.AddScoped<CommonLookupService>();
 builder.Services.AddScoped<InvoiceService>();
 builder.Services.AddScoped<SalesReturnService>();
-builder.Services.AddScoped<SalesReturnService>();
 builder.Services.AddScoped<IValidationService, ValidationService>();
-builder.Services.AddScoped<ItemService>();
 builder.Services.AddScoped<StockService>();
 builder.Services.AddScoped<GRNService>();
 builder.Services.AddScoped<GREService>();
@@ -46,14 +51,17 @@ builder.Services.AddScoped<CodeService>();
 builder.Services.AddScoped<BankService>();
 builder.Services.AddScoped<UserService>();
 
-
 builder.Services.AddMemoryCache();
 
-// DB Context
+// Database
 builder.Services.AddDbContext<MainDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("MainDb")));
 
-// AUTHENTICATION MUST BE BEFORE builder.Build()
+// JWT Authentication
+var jwtKey = builder.Configuration["Jwt:Key"] ?? "";
+var jwtIssuer = builder.Configuration["Jwt:Issuer"];
+var jwtAudience = builder.Configuration["Jwt:Audience"];
+
 builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
@@ -62,22 +70,21 @@ builder.Services.AddAuthentication("Bearer")
             ValidateIssuer = true,
             ValidateAudience = true,
             ValidateIssuerSigningKey = true,
-            ValidateLifetime = true, // important for expiration
-            ClockSkew = TimeSpan.Zero, // remove 5-minute grace period
-            ValidIssuer = builder.Configuration["Jwt:Issuer"],
-            ValidAudience = builder.Configuration["Jwt:Audience"],
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero,
+            ValidIssuer = jwtIssuer,
+            ValidAudience = jwtAudience,
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                Encoding.UTF8.GetBytes(jwtKey))
         };
 
-        // Detect expired tokens
         options.Events = new JwtBearerEvents
         {
             OnAuthenticationFailed = context =>
             {
                 if (context.Exception is SecurityTokenExpiredException)
                 {
-                    context.Response.Headers.Add("Token-Expired", "true");
+                    context.Response.Headers["Token-Expired"] = "true";
                 }
                 return Task.CompletedTask;
             }
@@ -86,7 +93,7 @@ builder.Services.AddAuthentication("Bearer")
 
 var app = builder.Build();
 
-// Middleware order
+// Middleware
 app.UseAuthentication();
 app.UseMiddleware<Api.Middlewares.JwtSessionMiddleware>();
 
@@ -97,11 +104,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
-// Controllers
 app.MapControllers();
 
-// Run
 app.Run();
