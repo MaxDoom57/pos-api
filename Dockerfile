@@ -2,8 +2,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 
 COPY . .
-RUN dotnet restore Api/ApiS.csproj
-RUN dotnet publish Api/ApiS.csproj -c Release -o /app/publish
+RUN dotnet restore ApiS/Api.csproj
+RUN dotnet publish ApiS/Api.csproj -c Release -o /app/publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /app
