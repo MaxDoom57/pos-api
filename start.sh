@@ -19,4 +19,4 @@ echo "=== Waiting for tunnel to be ready ==="
 sleep 5
 
 echo "=== Starting POSApi ==="
-exec dotnet ServiceStationApi.dll --urls "http://0.0.0.0:${PORT:-10000}"
+exec dotnet Api.dll --urls "http://0.0.0.0:${PORT:-10000}"
