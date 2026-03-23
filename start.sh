@@ -6,10 +6,12 @@ curl -L https://github.com/cloudflare/cloudflared/releases/latest/download/cloud
   -o ./cloudflared
 chmod +x ./cloudflared
 
+echo "=== CF_ACCESS_CLIENT_ID is set: ${CF_ACCESS_CLIENT_ID:0:8}... ==="
 echo "=== Starting cloudflared tunnel proxy ==="
+
 ./cloudflared access tcp \
-  --hostname dbpos.eposmart.com \
-  --url localhost:14330 \
+  --hostname ssms-hat-02.eposmart.com \
+  --url localhost:14333 \
   --service-token-id "$CF_ACCESS_CLIENT_ID" \
   --service-token-secret "$CF_ACCESS_CLIENT_SECRET" &
 
@@ -17,4 +19,4 @@ echo "=== Waiting for tunnel to be ready ==="
 sleep 5
 
 echo "=== Starting POSApi ==="
-exec dotnet Api.dll --urls "http://0.0.0.0:${PORT:-8080}"
+exec dotnet ServiceStationApi.dll --urls "http://0.0.0.0:${PORT:-10000}"
